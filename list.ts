@@ -1,20 +1,22 @@
-class List {
+export default class List {
+  private memory: any[];
+  private length: number;
+
   constructor() {
     this.memory = [];
     this.length = 0;
   }
 
-  get(address) {
+  get(address: number): any {
     return this.memory[address];
   }
 
-  push(value) {
+  push(value: any): void {
     this.memory[this.length] = value;
     this.length++;
-    return this;
   }
 
-  pop() {
+  pop(): any {
     if (this.length === 0) return;
 
     const lastAddress = this.length - 1;
@@ -25,7 +27,7 @@ class List {
     return lastValue;
   }
 
-  unshift(value) {
+  unshift(value: any): void {
     let previous = value;
 
     for (let address = 0; address < this.length; address++) {
@@ -38,7 +40,7 @@ class List {
     this.length--;
   }
 
-  shift() {
+  shift(): any {
     if (this.length === 0) return;
 
     const firstValue = this.memory[0];
@@ -53,5 +55,3 @@ class List {
     return firstValue;
   }
 }
-
-export default List;
