@@ -37,7 +37,7 @@ export default class List {
     }
 
     this.memory[this.length] = previous;
-    this.length--;
+    this.length++;
   }
 
   shift(): any {
