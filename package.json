@@ -1,12 +1,16 @@
 {
   "name": "data-structures",
   "version": "1.0.0",
-  "description": "Nothing to see here... just practicing mah data structures",
-  "main": "index.js",
+  "description": "Just practicing",
+  "main": "data-structures.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc --outDir dist/ && ava dist/test/"
   },
   "author": "Faheem Patel",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+  },
+  "devDependencies": {
+    "ava": "^0.16.0"
+  }
 }
