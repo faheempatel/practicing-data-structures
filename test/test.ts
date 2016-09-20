@@ -16,3 +16,13 @@ test('list implementation is correct', t => {
   t.is(list.pop(), 1);
   t.is(list.get(0), undefined);
 });
+
+test('hash table implementation is correct', t => {
+  const hashTable = new DataStructures.HashTable();
+
+  hashTable.set('foo', 'bar');
+  t.is(hashTable.get('foo'), 'bar');
+
+  hashTable.remove('foo');
+  t.is(hashTable.get('foo'), undefined);
+});
