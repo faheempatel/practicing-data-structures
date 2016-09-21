@@ -26,3 +26,15 @@ test('hash table implementation is correct', t => {
   hashTable.remove('foo');
   t.is(hashTable.get('foo'), undefined);
 });
+
+test('stack implementation is correct', t => {
+  const stack = new DataStructures.Stack();
+
+  stack.push(1);
+  stack.push(2);
+
+  t.is(stack.peek(), 2);
+  t.is(stack.pop(), 2);
+  t.is(stack.peek(), 1);
+  t.is(stack.pop(), 1);
+});
