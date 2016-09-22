@@ -38,3 +38,15 @@ test('stack implementation is correct', t => {
   t.is(stack.peek(), 1);
   t.is(stack.pop(), 1);
 });
+
+test('queue implementation is correct', t => {
+  const queue = new DataStructures.Queue();
+
+  queue.enqueue(1);
+  queue.enqueue(2);
+
+  t.is(queue.peek(), 1);
+  t.is(queue.dequeue(), 1);
+  t.is(queue.peek(), 2);
+  t.is(queue.dequeue(), 2);
+});
