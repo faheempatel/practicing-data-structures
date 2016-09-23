@@ -4,13 +4,13 @@
   "description": "Just practicing",
   "main": "data-structures.js",
   "scripts": {
-    "test": "tsc --outDir dist/ && ava dist/test/"
+    "test": "tsc --strictNullChecks --outDir dist/ && ava dist/test/"
   },
   "author": "Faheem Patel",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.16.0",
-    "typescript": "^1.8.10"
+    "typescript": "^2.0.3"
   }
 }
