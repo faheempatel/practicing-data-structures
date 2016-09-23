@@ -50,3 +50,22 @@ test('queue implementation is correct', t => {
   t.is(queue.peek(), 2);
   t.is(queue.dequeue(), 2);
 });
+
+test('graph implementation is correct', t => {
+  const graph = new DataStructures.Graph();
+
+  graph.addNode(1);
+  graph.addNode(2);
+  graph.addNode(3);
+
+  t.is(graph.find(1).value, 1);
+  t.is(graph.find(2).value, 2);
+
+  graph.addLine(1, 2);
+  graph.addLine(1, 3);
+  graph.addLine(2, 3);
+
+  t.is(graph.find(1).lines[0].value, 2);
+  t.is(graph.find(1).lines[1].value, 3);
+  t.is(graph.find(2).lines[0].value, 3);
+});
