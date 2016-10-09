@@ -69,3 +69,24 @@ test('graph implementation is correct', t => {
   t.is(graph.find(1).lines[1].value, 3);
   t.is(graph.find(2).lines[0].value, 3);
 });
+
+test('linked list implementation is correct', t => {
+  const linkedList = new DataStructures.LinkedList();
+
+  linkedList.add(1, 0);
+  linkedList.add(2, 1);
+  linkedList.add(3, 2);
+  linkedList.add(4, 3);
+
+  t.is(linkedList.get(0).value, 1);
+  t.is(linkedList.get(1).value, 2);
+
+  linkedList.remove(1);
+  t.is(linkedList.get(1).value, 3);
+
+  linkedList.remove(2);
+  t.is(linkedList.get(1).value, 3);
+
+  linkedList.remove(0);
+  t.is(linkedList.get(0).value, 3);
+});
