@@ -1,5 +1,10 @@
+interface Node {
+  value: any;
+  next: Node;
+}
+
 export default class LinkedList {
-  private head: any;
+  private head: Node;
   private length: number;
 
   constructor() {
@@ -7,7 +12,7 @@ export default class LinkedList {
     this.length = 0;
   }
 
-  get(position: number) {
+  get(position: number): any {
     if (position >= this.length) {
       throw new Error('Position out of list range');
     }
@@ -20,8 +25,8 @@ export default class LinkedList {
     return current;
   }
 
-  add(value: any, position: number) {
-    const node = {
+  add(value: any, position: number): void {
+    const node: Node = {
       value,
       next: null,
     };
@@ -31,7 +36,6 @@ export default class LinkedList {
     } else {
       const prev = this.get(position - 1);
       const next = prev.next;
-
       prev.next = node;
       node.next = next;
     }
@@ -39,7 +43,7 @@ export default class LinkedList {
     this.length++;
   }
 
-  remove(position: number) {
+  remove(position: number): void {
     if (position == 0) {
       this.head = this.head.next;
     } else {
