@@ -90,3 +90,20 @@ test('linked list implementation is correct', t => {
   linkedList.remove(0);
   t.is(linkedList.get(0).value, 3);
 });
+
+test('tree implementation is correct', t => {
+  const tree = new DataStructures.Tree();
+
+  tree.add(1);
+  tree.add(2, 1);
+  tree.add(3, 1);
+  tree.add(4, 2);
+  tree.add(5, 2);
+
+  const traversed = [];
+  tree.traverse(node => {
+    traversed.push(node.value);
+  });
+
+  t.deepEqual(traversed, [1, 2, 4, 5, 3]);
+});

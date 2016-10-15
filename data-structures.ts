@@ -4,6 +4,7 @@ import Stack from './stack';
 import Queue from './queue';
 import Graph from './graph';
 import LinkedList from './linked-list';
+import Tree from './tree';
 
 export {
   List,
@@ -12,4 +13,5 @@ export {
   Queue,
   Graph,
   LinkedList,
+  Tree,
 }
