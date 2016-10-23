@@ -107,3 +107,27 @@ test('tree implementation is correct', t => {
 
   t.deepEqual(traversed, [1, 2, 4, 5, 3]);
 });
+
+test('binary search tree implementation is correct', t => {
+  const binarySearchTree = new DataStructures.BinarySearchTree();
+   
+  // root
+  binarySearchTree.add(4);
+
+  // left side
+  binarySearchTree.add(2);
+  binarySearchTree.add(1);
+  binarySearchTree.add(3);
+
+  // right side
+  binarySearchTree.add(6);
+  binarySearchTree.add(5);
+  binarySearchTree.add(7);
+
+  t.truthy(binarySearchTree.contains(2));
+  t.truthy(binarySearchTree.contains(3));
+  t.truthy(binarySearchTree.contains(4));
+
+  // duplicate
+  binarySearchTree.add(6);
+});

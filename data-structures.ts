@@ -5,6 +5,7 @@ import Queue from './queue';
 import Graph from './graph';
 import LinkedList from './linked-list';
 import Tree from './tree';
+import BinarySearchTree from './binary-search-tree';
 
 export {
   List,
@@ -14,4 +15,5 @@ export {
   Graph,
   LinkedList,
   Tree,
+  BinarySearchTree,
 }
